@@ -130,7 +130,7 @@ function increment(){
 
     if(i<game.length-1){
         i = i+1;
-        timer = 30;
+        timer = 10;
         reset();
     }else{
         completion();
@@ -174,7 +174,7 @@ function completion(){
     document.getElementById("QA").style.display = "none";
     document.getElementById("result").style.display = "block";
     document.getElementById("msg").textContent = "You completed the Q&A"
-    document.getElementById("score").style.display = "You got "+correctans+" guesses correct out of 5!";
+    document.getElementById("score").textContent = "You got "+correctans+" guesses correct out of 5!";
     clearInterval(intervalId);
 }
 
